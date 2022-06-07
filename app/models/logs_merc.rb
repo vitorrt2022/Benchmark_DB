@@ -1,0 +1,2 @@
+class LogsMerc < ApplicationRecord
+end

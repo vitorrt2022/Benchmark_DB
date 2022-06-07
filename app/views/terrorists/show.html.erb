@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @terrorist %>
+
+<div>
+  <%= link_to "Edit this terrorist", edit_terrorist_path(@terrorist) %> |
+  <%= link_to "Back to terrorists", terrorists_path %>
+
+  <%= button_to "Destroy this terrorist", @terrorist, method: :delete %>
+</div>

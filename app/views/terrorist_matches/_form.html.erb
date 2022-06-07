@@ -1,0 +1,32 @@
+<%= form_with(model: terrorist_match) do |form| %>
+  <% if terrorist_match.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(terrorist_match.errors.count, "error") %> prohibited this terrorist_match from being saved:</h2>
+
+      <ul>
+        <% terrorist_match.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :user_id, style: "display: block" %>
+    <%= form.number_field :user_id %>
+  </div>
+
+  <div>
+    <%= form.label :m_name, style: "display: block" %>
+    <%= form.text_field :m_name %>
+  </div>
+
+  <div>
+    <%= form.label :match, style: "display: block" %>
+    <%= form.text_field :match %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

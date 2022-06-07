@@ -1,0 +1,2 @@
+class TerroristMatch < ApplicationRecord
+end

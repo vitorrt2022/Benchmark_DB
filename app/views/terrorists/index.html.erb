@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Terrorists</h1>
+
+<div id="terrorists">
+  <% @terrorists.each do |terrorist| %>
+    <%= render terrorist %>
+    <p>
+      <%= link_to "Show this terrorist", terrorist %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New terrorist", new_terrorist_path %>

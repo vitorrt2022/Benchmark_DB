@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @logs_merc %>
+
+<div>
+  <%= link_to "Edit this logs merc", edit_logs_merc_path(@logs_merc) %> |
+  <%= link_to "Back to logs mercs", logs_mercs_path %>
+
+  <%= button_to "Destroy this logs merc", @logs_merc, method: :delete %>
+</div>

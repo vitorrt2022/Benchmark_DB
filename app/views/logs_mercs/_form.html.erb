@@ -1,0 +1,32 @@
+<%= form_with(model: logs_merc) do |form| %>
+  <% if logs_merc.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(logs_merc.errors.count, "error") %> prohibited this logs_merc from being saved:</h2>
+
+      <ul>
+        <% logs_merc.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :user_id, style: "display: block" %>
+    <%= form.number_field :user_id %>
+  </div>
+
+  <div>
+    <%= form.label :m_name, style: "display: block" %>
+    <%= form.text_field :m_name %>
+  </div>
+
+  <div>
+    <%= form.label :t_name, style: "display: block" %>
+    <%= form.text_field :t_name %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
